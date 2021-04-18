@@ -5,7 +5,8 @@ const main = document.querySelector('main');
       const application = document.querySelector('form');
       const inputValue = document.querySelectorAll('input').value;
       const submitBtn = document.querySelector('.submitBtn');
-      const form = document.querySelector('form')
+      const form = document.querySelector('form');
+      const medList = document.querySelector('.userMedications');
 
 
 
@@ -28,22 +29,26 @@ const main = document.querySelector('main');
         event.preventDefault();
         let userInput = {
             name: document.getElementById('name').value,
-            milligrams: document.getElementById('milligrams').value
+            milligrams: document.getElementById('milligrams').value,
+            doses: document.getElementById('doses').value
         }
         userInputArray.push(userInput);
         // console.log(userInputArray);
         form.reset();
+        form.classList.toggle('hide');
+        medicationList();
+        addBtn.classList.toggle('hide');
     }
+    
+    function medicationList (){
+    
+        const drugForm = document.createElement('div');
+        drugForm.innerHTML = `<div>
+            <h3>${userInputArray[0].name}</h3>
+        </div>`
+        medList.appendChild(drugForm);
+        }
 
     document.addEventListener('DOMContentLoaded', ()=>{
     submitBtn.addEventListener('click', addDrug)
     })
-
-
-    //   function createDrugForm (){
-
-    //     const form = document.createElement('div');
-    //     // form.innerHTML = ``
-    //                 document.getElementById('pillBoard').appendChild(form);
-
-    //   }
