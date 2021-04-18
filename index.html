@@ -54,7 +54,7 @@
             </section>
             <section class="pillBoard" id="pillBoard">
                 <form class="hide" >
-                    <div>
+                    <div class="formContainer">
                         <div>
                             <h3>Name</h3>
                             <label for="name" class="sr-only">Name</label>
@@ -84,66 +84,13 @@
                                 <input type="text" name="hours" id="hours">
                                 <label for="hours" class="sr-only">Hours</label>
                             </div>
-                            <button class="submitBtn" type="submit">Save</button>
                         </div>
                     </div>
+                    <button class="submitBtn" type="submit">Save</button>
                 </form>
             </section>
         </main>
     </div>
-  <script>
-      const startBtn = document.querySelector('.startBtn');
-      const main = document.querySelector('main');
-      const header = document.querySelector('header');
-      const addBtn = document.querySelector('.addBtn');
-      const application = document.querySelector('form');
-      const inputValue = document.querySelectorAll('input');
-      const submitBtn = document.querySelector('.submitBtn');
-      const form = document.querySelector('form')
-
-
-
-      startBtn.addEventListener('click', function (){
-        main.classList.add('show')
-        header.style.display = "none";
-      })
-
-      addBtn.addEventListener('click', formDisplay)
-
-      function formDisplay () {
-        addBtn.classList.toggle('hide');
-        application.classList.toggle('hide')
-
-      }
-
-      let userInputArray = [];
-
-    const addDrug = (event) =>{
-        event.preventDefault
-        let userInput = {
-            name: document.getElementById('name').value,
-            milligrams: document.getElementById('milligrams').value
-        }
-        userInputs.push(userInput);
-        console.log(userInputArray);
-    }
-
-    document.addEventListener('DOMContentLoaded', ()=>{
-    submitBtn.addEventListener('click', addDrug)
-    })
-  
-
-    //   function createDrugForm (){
-
-    //     const form = document.createElement('div');
-    //     // form.innerHTML = ``
-    //                 document.getElementById('pillBoard').appendChild(form);
-
-    //   }
-
-
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
