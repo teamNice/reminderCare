@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./less/style.css">
+    <style>
+        main{
+           display:none; 
+           position:relative;
+        }
+
+        .show{
+            display:block;
+        }
+
+        .pillBoard{
+            z-index:4;
+        }
+
+        form{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
+        }
+
+        .hide{
+            display:none;
+        }
+
+    </style>
     <title>Reminder Care</title>
 </head>
 <body>
@@ -25,49 +52,96 @@
             <section>
                     <button class="addBtn">Add Pill</button>
             </section>
-            <section>
-                <div>
-                    <form>
+            <section class="pillBoard" id="pillBoard">
+                <form class="hide" >
+                    <div>
                         <div>
-                            <div>
-                                <h3>Name</h3>
-                                <label for="name" class="sr-only">Name</label>
-                                <input type="text" name="name" value="" placeholder="name">
-                            </div>
-                            <div>
-                                <h3>Milligrams</h3>
-                                <label for="milligrams" class="sr-only">Milligrams</label>
-                                <input type="text" name="milligrams" value="" placeholder="mg">
-                            </div>
-                            <div>
-                                <h3>Doses in a day</h3>
-                                <label for="doses" class="sr-only">Doses in a day</label>
-                                <input type="text" name="doses" value="" placeholder="doses">
-                            </div>
-                            <div>
-                                <h3>Set a reminder</h3>
-                                <input type="radio" name="reminder" id="yes" value="Yes">
-                                <label for="yes">Yes</label>
-                                <input type="radio" name="reminder" id="no" value="No">
-                                <label for="no">No</label>
-                                <div>
-                                    <h3>How many alerts?</h3>
-                                    <input type="text" name="alerts" id="alerts">
-                                    <label for="alerts" class="sr-only">Alerts</label>
-                                    <h3>How many hours?</h3>
-                                    <input type="text" name="hours" id="hours">
-                                    <label for="hours" class="sr-only">Hours</label>
-                                </div>
-                                <button type="submit">Save</button>
-                            </div>
+                            <h3>Name</h3>
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" id="name" name="name"  placeholder="name">
                         </div>
-                    </form>
-                </div>
+                        <div>
+                            <h3>Milligrams</h3>
+                            <label for="milligrams" class="sr-only">Milligrams</label>
+                            <input type="text" id="milligrams" name="milligrams"  placeholder="mg">
+                        </div>
+                        <div>
+                            <h3>Doses in a day</h3>
+                            <label for="doses" class="sr-only">Doses in a day</label>
+                            <input type="text" name="doses"  placeholder="doses">
+                        </div>
+                        <div>
+                            <h3>Set a reminder</h3>
+                            <input type="radio" name="reminder" id="yes" value="Yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="reminder" id="no" value="No">
+                            <label for="no">No</label>
+                            <div>
+                                <h3>How many alerts?</h3>
+                                <input type="text" name="alerts" id="alerts" >
+                                <label for="alerts" class="sr-only">Alerts</label>
+                                <h3>How many hours?</h3>
+                                <input type="text" name="hours" id="hours">
+                                <label for="hours" class="sr-only">Hours</label>
+                            </div>
+                            <button class="submitBtn" type="submit">Save</button>
+                        </div>
+                    </div>
+                </form>
             </section>
         </main>
     </div>
   <script>
-      const startBtn = document.querySelector('.startBtn')
+      const startBtn = document.querySelector('.startBtn');
+      const main = document.querySelector('main');
+      const header = document.querySelector('header');
+      const addBtn = document.querySelector('.addBtn');
+      const application = document.querySelector('form');
+      const inputValue = document.querySelectorAll('input');
+      const submitBtn = document.querySelector('.submitBtn');
+      const form = document.querySelector('form')
+
+
+
+      startBtn.addEventListener('click', function (){
+        main.classList.add('show')
+        header.style.display = "none";
+      })
+
+      addBtn.addEventListener('click', formDisplay)
+
+      function formDisplay () {
+        addBtn.classList.toggle('hide');
+        application.classList.toggle('hide')
+
+      }
+
+      let userInputArray = [];
+
+    const addDrug = (event) =>{
+        event.preventDefault
+        let userInput = {
+            name: document.getElementById('name').value,
+            milligrams: document.getElementById('milligrams').value
+        }
+        userInputs.push(userInput);
+        console.log(userInputArray);
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+    submitBtn.addEventListener('click', addDrug)
+    })
+  
+
+    //   function createDrugForm (){
+
+    //     const form = document.createElement('div');
+    //     // form.innerHTML = ``
+    //                 document.getElementById('pillBoard').appendChild(form);
+
+    //   }
+
+
 
 
   </script>
