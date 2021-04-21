@@ -22,11 +22,25 @@ function formDisplay () {
     application.classList.toggle('hide');
 }
 
+function checkBox (){
+    inputValue.addEventListener('click', function(){
+        if(inputValue.checked === true){
+            reminderOptions.classList.remove('hide');
+        } else if(inputValue.checked !== true ){
+            reminderOptions.classList.add('hide')
+        } else{
+            reminderOptions.classList.add('hide')
+        }
+    })
+  
+
+}
+
+checkBox();
+
 function addDrug (event){
+
     event.preventDefault();
-    if (inputValue.value === 'Yes') {
-        reminderOptions.classList.toggle('hide');
-    }
     let userInput = {
         name: document.getElementById('name').value,
         milligrams: document.getElementById('milligrams').value,
@@ -37,16 +51,21 @@ function addDrug (event){
     userInputArray.push(userInput);
     // console.log(userInputArray);
     form.reset();
-    // form.classList.toggle('hide');
+    form.classList.toggle('hide');
     medicationList();
-    // addBtn.classList.toggle('hide');
+    addBtn.classList.toggle('hide');
 }
 
 function medicationList (){
     const drugForm = document.createElement('div');
-    drugForm.innerHTML = `<div>
-        <h3>${userInputArray[0].name}</h3>
+    userInputArray.forEach(input =>{
+        drugForm.innerHTML = `<div>
+        <h3>${input.name}</h3>
+        <p>${input.milligrams}</p>
+        <p>${input.doses}</p>
     </div>`
+    })
+   
     medList.appendChild(drugForm);
 }
 
