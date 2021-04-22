@@ -2,7 +2,7 @@ const startBtn = document.querySelector('.startBtn');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
 const addBtn = document.querySelector('.addBtn');
-const application = document.querySelector('form');
+const application = document.querySelector('.drugForm');
 const inputValue = document.querySelectorAll('input[type=radio]');
 const submitBtn = document.querySelector('.submitBtn');
 const form = document.querySelector('.drugForm');
@@ -61,16 +61,16 @@ function addDrug (event){
 }
 
 function medicationList (){
-    const drugForm = document.createElement('div');
+    const drugInfo = document.createElement('div');
     userInputArray.forEach(input =>{
-        drugForm.innerHTML = `<div>
+        drugInfo.innerHTML = `<div>
         <h3>${input.name}</h3>
         <p>${input.milligrams}</p>
         <p>${input.doses}</p>
     </div>`
     })
    
-    medList.appendChild(drugForm);
+    medList.appendChild(drugInfo);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
