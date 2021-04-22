@@ -3,11 +3,12 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const addBtn = document.querySelector('.addBtn');
 const application = document.querySelector('form');
-const inputValue = document.querySelector('input[type=radio]');
+const inputValue = document.querySelectorAll('input[type=radio]');
 const submitBtn = document.querySelector('.submitBtn');
-const form = document.querySelector('form');
+const form = document.querySelector('.drugForm');
 const medList = document.querySelector('.userMedications');
 const reminderOptions = document.querySelector('.reminderOptions');
+const nobutton = document.querySelector('#no')
 let userInputArray = [];
 
 startBtn.addEventListener('click', function (){
@@ -23,16 +24,19 @@ function formDisplay () {
 }
 
 function checkBox (){
-    inputValue.addEventListener('click', function(){
-        if(inputValue.checked === true){
-            reminderOptions.classList.remove('hide');
-        } else if(inputValue.checked !== true ){
-            reminderOptions.classList.add('hide')
-        } else{
-            reminderOptions.classList.add('hide')
-        }
+    inputValue.forEach(valueradio =>{
+        valueradio.addEventListener('click', function(e){
+            const id = e.target.value;
+            if(id === "Yes"){
+                reminderOptions.classList.remove('hide');
+            } else if(id === "No"){
+                reminderOptions.classList.add('hide');
+            } else {
+                reminderOptions.classList.add('hide');
+            }
+        })
     })
-  
+   
 
 }
 
