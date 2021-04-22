@@ -4,34 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
     <link rel="stylesheet" href="./less/style.css">
-    <style>
-        main{
-           display:none; 
-           position:relative;
-        }
-
-        .show{
-            display:block;
-        }
-
-        .pillBoard{
-            z-index:4;
-        }
-
-        form{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            /* bring your own prefixes */
-            transform: translate(-50%, -50%);
-        }
-
-        .hide{
-            display:none;
-        }
-
-    </style>
     <title>Reminder Care</title>
 </head>
 <body>
@@ -45,6 +23,9 @@
                 <div class="headerButtons">
                     <button class="startBtn">Start</button>
                     <button class="tutorialBtn">Tutorial</button>
+                </div>
+                <div>
+                    <button onclick="mainApp.logOut();">Logout</button>
                 </div>
             </div>
         </header>
@@ -95,5 +76,7 @@
         </main>
     </div>
   <script src="script.js"></script>
+ <script src="fireBase.js"></script>
+ <script src="main.js"></script>
 </body>
 </html>
