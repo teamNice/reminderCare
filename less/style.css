@@ -173,7 +173,7 @@ main {
 .pillBoard {
   z-index: 4;
 }
-form {
+.drugForm {
   position: fixed;
   top: 50%;
   left: 50%;
