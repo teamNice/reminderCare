@@ -1,4 +1,5 @@
 var mainApp = {};
+const logoutBtn = document.querySelector('.logoutBtn');
 
 (function (){
     var uid = null;
@@ -16,5 +17,9 @@ var mainApp = {};
       }
       
       mainApp.logOut = logOut;
+
+      logoutBtn.addEventListener('click', function(){
+        mainApp.logOut();
+      })
 
 })();
