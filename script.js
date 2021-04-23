@@ -8,12 +8,13 @@ const form = document.querySelector('.drugForm');
 const medList = document.querySelector('.userMedications');
 const reminderOptions = document.querySelector('.reminderOptions');
 const nobutton = document.querySelector('#no');
-const main = document.querySelector('.mainContainer');
+const main = document.querySelector(".mainContainer");
+const headerBtns = document.querySelector(".headerButtons")
 let userInputArray = [];
 
 startBtn.addEventListener('click', function (){
-    main.classList.remove("hide");
-    header.style.display = "none";
+    main.classList.add("show");
+    headerBts.style.display = "none";
 })
 
 addBtn.addEventListener('click', formDisplay);
