@@ -211,15 +211,15 @@ main {
   padding: 10px;
   color: white;
   background-color: #5C5C67;
+  font-size: 1rem;
 }
 nav ul li {
   list-style: none;
+  justify-content: space-between;
+  margin-right: 10px;
 }
-.show {
-  display: block;
-}
-.pillBoard {
-  z-index: 4;
+nav ul {
+  display: flex;
 }
 .drugForm {
   position: fixed;
@@ -239,9 +239,6 @@ input {
   border: 2px solid black;
   padding: 5px;
   text-align: center;
-}
-.hide {
-  display: none;
 }
 .homepageHeader {
   display: flex;
@@ -283,4 +280,16 @@ input {
   font-size: 1.5rem;
   background-color: #D3A7AB;
   cursor: pointer;
+}
+.emailSignInContainer {
+  margin-top: 20px;
+}
+.show {
+  display: block;
+}
+.pillBoard {
+  z-index: 4;
+}
+.hide {
+  display: none;
 }

@@ -1,3 +1,4 @@
+
 (function(){
   // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -32,4 +33,12 @@ var ui = new firebaseui.auth.AuthUI(firebase.auth());
     };
     // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
+
+const loginBtn = document.querySelector(".loginContainer");
+const emailLogin = document.querySelector('.emailSignInContainer');
+
+loginBtn.addEventListener('click', function(){
+  emailLogin.classList.remove("hide");
+  loginBtn.classList.toggle("hide");
+})
 })()

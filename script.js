@@ -1,8 +1,4 @@
-const loginContainer = document.querySelector('.loginContainer');
-const emailLogin = document.querySelector('.emailSignInContainer');
-const loginBtn = document.querySelector('.loginBtn');
-const startBtn = document.querySelector('.startBtn');
-const main = document.querySelector('main');
+const startBtn = document.querySelector(".start");
 const header = document.querySelector('header');
 const addBtn = document.querySelector('.addBtn');
 const application = document.querySelector('.drugForm');
@@ -11,16 +7,12 @@ const submitBtn = document.querySelector('.submitBtn');
 const form = document.querySelector('.drugForm');
 const medList = document.querySelector('.userMedications');
 const reminderOptions = document.querySelector('.reminderOptions');
-const nobutton = document.querySelector('#no')
+const nobutton = document.querySelector('#no');
+const main = document.querySelector('.mainContainer');
 let userInputArray = [];
 
-loginBtn.addEventListener('click', function(){
-  emailLogin.classList.toggle('hide');
-  loginContainer.classList.toggle('hide');
-})
-
 startBtn.addEventListener('click', function (){
-    main.classList.add('show');
+    main.classList.remove("hide");
     header.style.display = "none";
 })
 
