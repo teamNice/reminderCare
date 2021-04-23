@@ -15,19 +15,24 @@
 <body>
     <div class="wrapper">
         <header>
-            <div >
-                <h1>Reminder Care</h1>
-                <div class="welcomeContainer">
-                    <h2>Welcome! This website helps you track how many pills you take in a day</h2>
+                <div class="navContainer">
+                    <div class="logoContainer">
+                        <h3>ReminderCare</h3>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li> <button onclick="mainApp.logOut();">Logout</button></li>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
+            <div>
                 <div class="headerButtons">
                     <button class="startBtn">Start</button>
                     <button class="tutorialBtn">Tutorial</button>
                 </div>
-                <div>
-                    <button onclick="mainApp.logOut();">Logout</button>
-                </div>
-            </div>
         </header>
         <main>
             <section>

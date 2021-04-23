@@ -13,10 +13,23 @@
     <title>SignIn</title>
 </head>
 <body>
-    <h1>Welcome to Reminder Care</h1>
-<div id="firebaseui-auth-container"></div>
-<div id="loader">Loading...</div>
+    <div class="wrapper">
+        <header class="homepageHeader">
+            <h1>Welcome to Reminder Care!</h1>
+            <div class="headerContainer">
+                <p>This website helps  you track of how many pills you take in a day</p>
+            </div>
+            <div class="loginContainer">
+                <button class="loginBtn">Login</button>
+            </div>
+            <div class="emailSignInContainer hide">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+            </div>
+        </header>
+    </div>
 <script src="fireBase.js"></script>
+<script src="script.js"></script>
 <script src="login.js"></script>
 </body>
 </html>

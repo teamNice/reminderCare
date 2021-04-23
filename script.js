@@ -1,3 +1,6 @@
+const loginContainer = document.querySelector('.loginContainer');
+const emailLogin = document.querySelector('.emailSignInContainer');
+const loginBtn = document.querySelector('.loginBtn');
 const startBtn = document.querySelector('.startBtn');
 const main = document.querySelector('main');
 const header = document.querySelector('header');
@@ -10,6 +13,11 @@ const medList = document.querySelector('.userMedications');
 const reminderOptions = document.querySelector('.reminderOptions');
 const nobutton = document.querySelector('#no')
 let userInputArray = [];
+
+loginBtn.addEventListener('click', function(){
+  emailLogin.classList.toggle('hide');
+  loginContainer.classList.toggle('hide');
+})
 
 startBtn.addEventListener('click', function (){
     main.classList.add('show');
@@ -36,8 +44,6 @@ function checkBox (){
             }
         })
     })
-   
-
 }
 
 checkBox();
