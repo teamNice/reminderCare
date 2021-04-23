@@ -201,9 +201,41 @@ h2 {
   text-align: center;
   color: #5C5C67;
 }
+body,
+ul,
+h1,
+h2,
+h3 p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 main {
   display: none;
   position: relative;
+}
+nav ul li {
+  justify-content: space-between;
+  margin-right: 10px;
+}
+nav ul {
+  display: flex;
+}
+.wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .navContainer {
   display: flex;
@@ -212,14 +244,6 @@ main {
   color: white;
   background-color: #5C5C67;
   font-size: 1rem;
-}
-nav ul li {
-  list-style: none;
-  justify-content: space-between;
-  margin-right: 10px;
-}
-nav ul {
-  display: flex;
 }
 .drugForm {
   position: fixed;
@@ -299,6 +323,21 @@ input {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 .show {
   display: block;
