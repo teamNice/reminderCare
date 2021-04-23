@@ -14,7 +14,7 @@ let userInputArray = [];
 
 startBtn.addEventListener('click', function (){
     main.classList.add("show");
-    headerBts.style.display = "none";
+    headerBtns.style.display = "none";
 })
 
 addBtn.addEventListener('click', formDisplay);
