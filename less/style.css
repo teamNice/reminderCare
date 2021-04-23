@@ -205,6 +205,16 @@ main {
   display: none;
   position: relative;
 }
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  background-color: #5C5C67;
+}
+nav ul li {
+  list-style: none;
+}
 .show {
   display: block;
 }
@@ -217,6 +227,18 @@ main {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+  background-color: white;
+  border: 5px solid black;
+  color: black;
+  padding: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+input {
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
 }
 .hide {
   display: none;
@@ -233,6 +255,7 @@ main {
   margin: 0 auto;
   padding: 50px;
   border-radius: 10px;
+  border: 2px solid black;
 }
 .headerContainer p {
   font-size: 2rem;
@@ -240,6 +263,8 @@ main {
   text-align: center;
 }
 .loginContainer {
+  position: relative;
+  bottom: 20px;
   width: 200px;
   margin: 0 auto;
   padding-top: 20px;
