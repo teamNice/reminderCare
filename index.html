@@ -13,7 +13,7 @@
     <title>Reminder Care</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div>
         <header>
                 <div class="navContainer">
                     <div class="logoContainer">
@@ -28,7 +28,7 @@
                     </nav>
                 </div>
             </div>
-            <div>
+            <div class="wrapper">
                 <div class="headerButtons">
                     <button class="start">Start</button>
                     <button class="tutorialBtn">Tutorial</button>
@@ -36,7 +36,7 @@
         </header>
         <main class="mainContainer">
             <section>
-                    <button class="addBtn">Add Pill</button>
+                    <button class="addBtn">+ Add Pill</button>
             </section>
             <section class="pillBoard" id="pillBoard">
                 <form class="drugForm hide" >
@@ -44,17 +44,17 @@
                         <div>
                             <h3>Name</h3>
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" name="name"  placeholder="name">
+                            <input type="text" id="name" name="name"  placeholder="name" required>
                         </div>
                         <div>
                             <h3>Milligrams</h3>
                             <label for="milligrams" class="sr-only">Milligrams</label>
-                            <input type="text" id="milligrams" name="milligrams"  placeholder="mg">
+                            <input type="text" id="milligrams" name="milligrams"  placeholder="mg" required>
                         </div>
                         <div>
                             <h3>Doses in a day</h3>
                             <label for="doses" class="sr-only">Doses in a day</label>
-                            <input type="text" name="doses"  placeholder="doses" id="doses">
+                            <input type="text" name="doses"  placeholder="doses" id="doses" required>
                         </div>
                         <div>
                             <h3>Set a reminder</h3>
@@ -78,6 +78,7 @@
             <section class="userMedications">
             </section>
         </main>
+    
     </div>
 <script src="./script.js"></script>
  <script src="fireBase.js"></script>
