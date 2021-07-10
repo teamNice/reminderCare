@@ -160,35 +160,35 @@ html {
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1UA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1UA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4i1UA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4i1UA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-NYi1UA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-NYi1UA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-2Y-1UA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-2Y-1UA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rubik/v12/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-ro-1UA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/rubik/v14/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-ro-1UA.ttf) format('truetype');
 }
 body {
   background-color: #D9D5D5;
@@ -214,7 +214,7 @@ ul {
 }
 a {
   text-decoration: none;
-  text-transform: uppercase;
+  color: white;
 }
 img {
   width: 100%;
@@ -227,7 +227,8 @@ main {
 }
 nav ul li {
   justify-content: space-between;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 nav ul {
   display: flex;
@@ -241,9 +242,12 @@ nav ul {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  color: white;
   background-color: #5C5C67;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.logoContainer h3 {
+  font-size: 1.5rem;
 }
 .drugForm {
   position: fixed;
@@ -252,17 +256,30 @@ nav ul {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   background-color: white;
-  border: 5px solid black;
+  border: 2px solid black;
   color: black;
-  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: 400;
   text-align: center;
 }
 input {
   border-radius: 5px;
   border: 2px solid black;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
+}
+.w3-light-grey {
+  background: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.w3-grey {
+  height: 24px;
+  width: 0%;
+  background: gray;
 }
 .homepageHeader {
   display: flex;
@@ -313,7 +330,9 @@ input {
   justify-content: center;
   padding-top: 200px;
 }
-.headerButtons button {
+.headerButtons button,
+.addBtn,
+.submitBtn {
   text-transform: none;
   padding-right: 20px;
   border: 2px solid black;
@@ -323,6 +342,14 @@ input {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.logoutBtn {
+  text-transform: none;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.addBtn {
+  margin-top: 20px;
 }
 .sr-only {
   border: 0 !important;
@@ -347,4 +374,12 @@ input {
 }
 .hide {
   display: none;
+}
+.drugInfo {
+  background-color: #D3A7AB;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid black;
+  width: 20%;
+  text-align: center;
 }

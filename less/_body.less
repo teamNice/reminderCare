@@ -39,7 +39,7 @@ ul {
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
+    color:white;
 }
 
 img {
@@ -55,8 +55,10 @@ main{
 
 nav ul li{
     justify-content: space-between;
-    margin-right:10px;
+    margin-right: 20px;
+    margin-top: 20px;
 }
+
 
 nav ul{
     display:flex;
@@ -74,7 +76,12 @@ nav ul{
     padding:10px;
     color:white;
     background-color:#5C5C67;
-    font-size:1rem;
+    font-size:1.2rem;
+    color:white;
+}
+
+.logoContainer h3{
+    font-size:1.5rem;
 }
 
 .drugForm{
@@ -84,9 +91,12 @@ nav ul{
      /* bring your own prefixes */
      transform: translate(-50%, -50%);
      background-color: white;
-     border:5px solid black;
+     border:2px solid black;
      color:black;
-     padding:10px;
+     padding-left:50px;
+     padding-right:50px;
+     padding-top:20px;
+     padding-bottom:20px;
      font-weight:400;
      text-align: center;
  }
@@ -94,9 +104,21 @@ nav ul{
  input{
      border-radius:5px;
      border:2px solid black;
-     padding:5px;
+     padding:10px;
      text-align: center;
  }
+
+ .w3-light-grey{
+     background:white;
+     border: 2px solid black;
+     border-radius: 5px;
+ }
+
+.w3-grey{
+    height:24px;
+    width:0%;
+    background: gray;
+}
 
 
 
@@ -158,7 +180,8 @@ nav ul{
     padding-top: 200px;
 }
 
-.headerButtons button{
+.headerButtons button,
+.addBtn, .submitBtn{
     text-transform: none;
     padding-right: 20px;
     border: 2px solid black;
@@ -168,6 +191,17 @@ nav ul{
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.logoutBtn{
+    text-transform: none;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.addBtn{
+    margin-top:20px;
 }
 
 .sr-only {
@@ -194,6 +228,15 @@ nav ul{
 
 .hide{
     display:none;
+}
+
+.drugInfo{
+   background-color:#D3A7AB;
+   padding:10px;
+   margin:10px;
+   border: 2px solid black; 
+   width:20%;
+   text-align: center;
 }
 
 
