@@ -12,24 +12,24 @@ const logoutBtn = document.querySelector('.logoutBtn');
 // const nobutton = document.querySelector('#no');
 // const main = document.querySelector(".mainContainer");
 // const headerBtns = document.querySelector(".headerButtons")
-let userStorageArray = [];
+// let userStorageArray = [];
 
 (function (){
     var uid = null;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-        let userValue = {
-            name: document.getElementById('name').value,
-            milligrams: parseInt(document.getElementById("milligrams").value),
-            doses: parseInt(document.getElementById("doses").value),
-            alert: parseInt(document.getElementById("alerts").value),
-            hours: parseInt(document.getElementById("hours").value)
-        }
-        userStorageArray.push(userValue);
-        let userStorage = JSON.stringify(userStorageArray);
-        localStorage.setItem("pillInfo", userStorage);
-        let userGetStorage = JSON.parse(localStorage.getItem("pillInfo"));
-        console.log(userGetStorage)
+        // let userValue = {
+        //     name: document.getElementById('name').value,
+        //     milligrams: parseInt(document.getElementById("milligrams").value),
+        //     doses: parseInt(document.getElementById("doses").value),
+        //     alert: parseInt(document.getElementById("alerts").value),
+        //     hours: parseInt(document.getElementById("hours").value)
+        // }
+        // userStorageArray.push(userValue);
+        // let userStorage = JSON.stringify(userStorageArray);
+        // localStorage.setItem("pillInfo", userStorage);
+        // let userGetStorage = JSON.parse(localStorage.getItem("pillInfo"));
+        // console.log(userGetStorage)
           // User is signed in.
           uid = user.id;
         } else{

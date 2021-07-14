@@ -79,10 +79,10 @@ function addDrug (event){
         hours: parseInt(document.getElementById("hours").value)
     }
     userInputArray.push(userInput);
-    // let userStorage = JSON.stringify(userInputArray);
-    // localStorage.setItem("pillInfo", userStorage);
-    // let userGetStorage = JSON.parse(localStorage.getItem("pillInfo"));
-    // console.log(userGetStorage)
+    let userStorage = JSON.stringify(userInputArray);
+    localStorage.setItem("pillInfo", userStorage);
+    let userGetStorage = JSON.parse(localStorage.getItem("pillInfo"));
+    console.log(userGetStorage)
 
     form.reset();
     form.classList.toggle('hide');
