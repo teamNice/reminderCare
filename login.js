@@ -1,4 +1,3 @@
-
 (function(){
   // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -41,4 +40,4 @@ loginBtn.addEventListener('click', function(){
   emailLogin.classList.remove("hide");
   loginBtn.classList.toggle("hide");
 })
-})()
+})();

@@ -79,9 +79,14 @@ function addDrug (event){
         hours: parseInt(document.getElementById("hours").value)
     }
     userInputArray.push(userInput);
-    // console.log(userInputArray);
+    let userStorage = JSON.stringify(userInputArray);
+    localStorage.setItem("pillInfo", userStorage);
+    let userGetStorage = JSON.parse(localStorage.getItem("pillInfo"));
+    console.log(userGetStorage)
+
     form.reset();
     form.classList.toggle('hide');
+    addBtn.classList.toggle('hide');
     const letters = /^[A-Za-z]+$/;
     const numbers = !/^[0-9]+$/;
     // const numbers = /![0-9]/;
@@ -91,7 +96,6 @@ function addDrug (event){
     else{
         alert("no numbers");
     }
-    addBtn.classList.toggle('hide');
 }
 
 function medicationList (){
